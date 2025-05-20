@@ -6,6 +6,7 @@ const newPosts = async ($) => {
   while (hasMore) {
     const params = new URLSearchParams({
       author: $.step.parameters.author,
+      q: 'author',
       count: count.toString(),
       sortBy: 'CREATED',
       start: next.toString(),
