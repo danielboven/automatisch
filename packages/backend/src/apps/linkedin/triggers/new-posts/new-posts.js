@@ -1,6 +1,6 @@
 const newPosts = async ($) => {
   let next = 0;
-  const count = 10;
+  const count = 100;
   let hasMore = true;
 
   while (hasMore) {
@@ -15,8 +15,17 @@ const newPosts = async ($) => {
     const { data } = await $.http.get('/rest/posts', params.toString());
 
     const elements = data.elements || [];
+    const posts = elements.filter((post) => {
+      const refId = post?.content?.reference?.id;
 
-    for (const post of elements) {
+      if ($.step.parameters.postType === 'articles') {
+        return refId?.startsWith('urn:li:linkedInArticle') ?? false;
+      }
+
+      return true;
+    });
+
+    for (const post of posts) {
       $.pushTriggerItem({
         raw: post,
         meta: {

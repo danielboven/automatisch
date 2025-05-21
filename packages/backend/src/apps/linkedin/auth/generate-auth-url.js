@@ -1,7 +1,7 @@
 import { URLSearchParams } from 'url';
 
 export default async function generateAuthUrl($) {
-  const scopes = ['r_liteprofile', 'r_organization_social'];
+  const scopes = ['r_basicprofile', 'r_organization_social'];
   const oauthRedirectUrlField = $.app.auth.fields.find(
     (field) => field.key == 'oAuthRedirectUrl'
   );
