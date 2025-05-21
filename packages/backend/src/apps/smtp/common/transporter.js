@@ -9,6 +9,9 @@ const transporter = ($) => {
       user: $.auth.data.username,
       pass: $.auth.data.password,
     },
+    tls: {
+      rejectUnauthorized: $.auth.data.tlsRejectUnauthorized,
+    },
   });
 };
 

@@ -10,7 +10,7 @@ export default defineApp({
   baseUrl: 'https://www.linkedin.com',
   apiBaseUrl: 'https://api.linkedin.com',
   iconUrl: '{BASE_URL}/apps/linkedin/assets/favicon.svg',
-  authDocUrl: '{DOCS_URL}/apps/linkedin/connection',
+  authDocUrl: 'https://learn.microsoft.com/nl-nl/linkedin/shared/authentication/authorization-code-flow?context=linkedin%2Fcontext&tabs=cURL1#step-1-configure-your-application',
   primaryColor: '#0A66C2',
   supportsConnections: true,
   beforeRequest: [addAuthHeader, addApiVersionHeader],

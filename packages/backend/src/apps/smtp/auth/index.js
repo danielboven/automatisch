@@ -62,6 +62,27 @@ export default {
       ],
     },
     {
+      key: 'tlsRejectUnauthorized',
+      label: 'Disable TLS certificate verification?',
+      type: 'dropdown',
+      required: false,
+      readOnly: false,
+      value: true,
+      placeholder: null,
+      description: null,
+      clickToCopy: false,
+      options: [
+        {
+          label: 'Yes',
+          value: false,
+        },
+        {
+          label: 'No',
+          value: true,
+        },
+      ],
+    },
+    {
       key: 'port',
       label: 'Port',
       type: 'string',
