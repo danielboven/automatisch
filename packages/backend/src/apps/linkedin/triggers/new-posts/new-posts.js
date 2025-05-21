@@ -12,7 +12,7 @@ const newPosts = async ($) => {
       start: next.toString(),
     });
 
-    const { data } = await $.http.get('/rest/posts', params.toString());
+    const { data } = await $.http.get(`/rest/posts?${params.toString()}`);
 
     const elements = data.elements || [];
     const posts = elements.filter((post) => {
