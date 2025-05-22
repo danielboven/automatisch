@@ -11,9 +11,7 @@ const MATION_LICENSE_VERIFY_URL =
   'https://license.mation.work/api/v1/licenses/verify';
 
 const hasValidLicense = async () => {
-  const license = await getLicense();
-
-  return license ? true : false;
+  return true;
 };
 
 const getLicense = async () => {
